@@ -1,3 +1,7 @@
+using BuySell.Api;
+using BuySell.Api.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +21,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<BuySellDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
 
 app.UseAuthorization();
 
