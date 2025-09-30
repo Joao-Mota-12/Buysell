@@ -24,7 +24,7 @@ namespace BuySell.Api.Models
 
         public DateTime? UpdatedAt { get; set; }
 
-        [InverseProperty("OrdersAsBuyer")]
+        [InverseProperty("Orders")]
         public User Buyer { get; set; } = null!;
 
         public Product Product { get; set; } = null!;

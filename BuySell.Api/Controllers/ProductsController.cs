@@ -1,22 +1,21 @@
 ﻿using BuySell.Api.Models;
+using BuySell.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuySell.Api.Controllers
 {
     [ApiController]
-    [Route("[Products]")]
-    public class ProductsController : ControllerBase
+    [Route("api/produts")]
+    public class ProductsController(IProductsService productsService) : ControllerBase
     {
+        private readonly IProductsService _productsService = productsService;
+
         [HttpGet(Name = "GetAllProducts")]
-        public IEnumerable<Product> GetAll()
+        public async Task<ActionResult<IEnumerable<Product>>> GetAll()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var products = await _productsService.GetAllProductsAsync();
+
+            return Ok(products);
         }
     }
 }
