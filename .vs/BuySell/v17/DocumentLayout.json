@@ -1,7 +1,64 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|c:\\users\\joao.mota\\source\\repos\\buysell\\buysell.api\\models\\enums\\orderstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|solutionrelative:buysell.api\\models\\enums\\orderstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|c:\\users\\joao.mota\\source\\repos\\buysell\\buysell.api\\models\\enums\\productstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|solutionrelative:buysell.api\\models\\enums\\productstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|c:\\users\\joao.mota\\source\\repos\\buysell\\buysell.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|solutionrelative:buysell.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|c:\\users\\joao.mota\\source\\repos\\buysell\\buysell.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|solutionrelative:buysell.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|c:\\users\\joao.mota\\source\\repos\\buysell\\buysell.api\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|solutionrelative:buysell.api\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|c:\\users\\joao.mota\\source\\repos\\buysell\\buysell.api\\models\\profiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|solutionrelative:buysell.api\\models\\profiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|c:\\users\\joao.mota\\source\\repos\\buysell\\buysell.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E49ABF-A974-4C37-8E31-364A52B20AF9}|BuySell.Api\\BuySell.Api.csproj|solutionrelative:buysell.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Tables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:Tables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:Data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{958EC538-C2E1-4DE5-80FB-DBFE93131B09}|NewFolder1{958EC538-C2E1-4DE5-80FB-DBFE93131B09}|C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\database.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{958EC538-C2E1-4DE5-80FB-DBFE93131B09}|NewFolder1{958EC538-C2E1-4DE5-80FB-DBFE93131B09}|solutionrelative:database.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:Data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Tables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:Tables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1040,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +91,146 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Enums\\OrderStatusEnum.cs",
+              "RelativeDocumentMoniker": "BuySell.Api\\Models\\Enums\\OrderStatusEnum.cs",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Enums\\OrderStatusEnum.cs",
+              "RelativeToolTip": "BuySell.Api\\Models\\Enums\\OrderStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T13:30:34.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Enums\\ProductStatusEnum.cs",
+              "RelativeDocumentMoniker": "BuySell.Api\\Models\\Enums\\ProductStatusEnum.cs",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Enums\\ProductStatusEnum.cs",
+              "RelativeToolTip": "BuySell.Api\\Models\\Enums\\ProductStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T13:30:16.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "BuySell.Api\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Order.cs",
+              "RelativeToolTip": "BuySell.Api\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T13:25:20.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "BuySell.Api\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Product.cs",
+              "RelativeToolTip": "BuySell.Api\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T13:24:30.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\User.cs",
+              "RelativeDocumentMoniker": "BuySell.Api\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\User.cs",
+              "RelativeToolTip": "BuySell.Api\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T13:23:00.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Profile.cs",
+              "RelativeDocumentMoniker": "BuySell.Api\\Models\\Profile.cs",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\Profile.cs",
+              "RelativeToolTip": "BuySell.Api\\Models\\Profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T13:22:24.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfileType.cs",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\ProfileType.cs",
+              "RelativeDocumentMoniker": "BuySell.Api\\Models\\ProfileType.cs",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\BuySell.Api\\Models\\ProfileType.cs",
+              "RelativeToolTip": "BuySell.Api\\Models\\ProfileType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T13:21:08.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tables.sql ",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Tables.sql",
+              "RelativeDocumentMoniker": "Tables.sql",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Tables.sql",
+              "RelativeToolTip": "Tables.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-30T13:18:17.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Data.sql ",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Data.sql",
+              "RelativeDocumentMoniker": "Data.sql",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Data.sql",
+              "RelativeToolTip": "Data.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-30T13:17:21.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Database.sql ",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Database.sql",
+              "RelativeDocumentMoniker": "Database.sql",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\Database.sql",
+              "RelativeToolTip": "Database.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-30T13:17:03.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "database.bat",
+              "DocumentMoniker": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\database.bat",
+              "RelativeDocumentMoniker": "database.bat",
+              "ToolTip": "C:\\Users\\Joao.Mota\\source\\repos\\BuySell\\database.bat",
+              "RelativeToolTip": "database.bat",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000614|",
+              "WhenOpened": "2025-09-30T13:16:33.452Z",
+              "EditorCaption": ""
             }
           ]
         },
