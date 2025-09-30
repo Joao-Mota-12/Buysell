@@ -4,7 +4,8 @@
 
 /.vs
 /BuySell.Api/bin/Debug/net8.0
-
+/BuySell.Api/obj
 bin/
 obj/
 .vs/
+
