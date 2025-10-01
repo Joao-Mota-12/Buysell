@@ -1,0 +1,7 @@
+<p>Product List!</p>
+
+<p-card *ngFor="let product of products" [header]="product.name" [style.margin-bottom]="'20px'">
+  <ng-template pTemplate="content">
+    <p>{{ product.description }}</p>
+  </ng-template>
+</p-card>
