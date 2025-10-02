@@ -1,4 +1,4 @@
-SET SERVER_NAME=(localdb)\MSSQLLocalDB
+SET SERVER_NAME=localhost
 
 sqlcmd -S %SERVER_NAME% -i "..\Database\Database.sql"
 
