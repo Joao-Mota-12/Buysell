@@ -1,7 +1,8 @@
-using BuySell.Api;
+﻿using BuySell.Api;
 using BuySell.Api.Repositories;
 using BuySell.Api.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +32,35 @@ builder.Services.AddCors(options =>
     });
 });
 
+
+// ADD AUTHENTICATION
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "ChainedJwt";
+    options.DefaultChallengeScheme = "ChainedJwt";
+
+}).AddJwtBearer(options =>
+{
+    options.Authority = "http://localhost:8080/realms/BuysellRealm";
+    options.Audience = "account";
+
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateAudience = false,
+        RoleClaimType = "roles"
+    };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireRole("Admin"));
+});
+
 var app = builder.Build();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseCors();
 
