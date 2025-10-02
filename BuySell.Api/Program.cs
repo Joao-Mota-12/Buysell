@@ -1,6 +1,8 @@
 ﻿using BuySell.Api;
 using BuySell.Api.Repositories;
 using BuySell.Api.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
@@ -33,14 +35,14 @@ builder.Services.AddCors(options =>
 });
 
 
-// ADD AUTHENTICATION
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme = "ChainedJwt";
-    options.DefaultChallengeScheme = "ChainedJwt";
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
 }).AddJwtBearer(options =>
 {
+    options.RequireHttpsMetadata = false;
     options.Authority = "http://localhost:8080/realms/BuysellRealm";
     options.Audience = "account";
 
@@ -72,9 +74,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-
-app.UseAuthorization();
 
 app.MapControllers();
 
