@@ -23,6 +23,8 @@ builder.Services.AddDbContext<BuySellDbContext>(options =>
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
 builder.Services.AddScoped<IProductsService, ProductsService>();
 
+
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
@@ -35,6 +37,7 @@ builder.Services.AddCors(options =>
 });
 
 
+// Authentication/Authorization
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

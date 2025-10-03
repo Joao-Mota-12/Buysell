@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from 'primeng/card';
 import { CommonModule } from '@angular/common';
-import { Product, ProductService } from '../../services/product-service';
+import { Product, ProductService } from '../../services/product-service/product-service';
 
 @Component({
   selector: 'app-product-list',
@@ -32,7 +32,7 @@ export class ProductList implements OnInit {
         console.log('Products successfully loaded.', this.products);
         this.isLoading = false;
       },
-      error: (err) => {
+      error: (err : any) => {
         console.error('API call failed:', err);
         this.errorMessage = 'Failed to load products. Please try again later.';
         this.isLoading = false;
