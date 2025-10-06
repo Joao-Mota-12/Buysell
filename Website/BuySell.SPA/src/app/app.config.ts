@@ -12,19 +12,20 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
 
 const localhostCondition = createInterceptorCondition<IncludeBearerTokenCondition>({
-  urlPattern: /^(http:\/\/localhost:8080)(\/.*)?$/i
+  urlPattern: /^https:\/\/localhost:7098(\/.*)?$/i
 });
 
 export const provideKeycloakAngular = () =>
   provideKeycloak({
     config: {
-      realm: 'master',
+      realm: 'buysell-realm',
       url: 'http://localhost:8080',
       clientId: 'angular-client'
     },
     initOptions: {
       onLoad: 'check-sso',
       silentCheckSsoRedirectUri: window.location.origin + '/assets/silent-check-sso.html',
+      redirectUri: window.location.origin + '/products',
     },
     features: [
       withAutoRefreshToken({
@@ -49,7 +50,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(),
     providePrimeNG({
       theme: {
         preset: Aura,

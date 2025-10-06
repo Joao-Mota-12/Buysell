@@ -7,7 +7,7 @@ import { provideKeycloak, createInterceptorCondition, withAutoRefreshToken, Auto
 // export const provideKeycloakAngular = () =>
 //   provideKeycloak({
 //     config: {
-//       realm: 'master',
+//       realm: 'buysell-realm',
 //       url: 'http://localhost:8080',
 //       clientId: 'angular-client'
 //     },

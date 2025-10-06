@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,28 +39,26 @@ builder.Services.AddCors(options =>
 
 
 // Authentication/Authorization
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-
-}).AddJwtBearer(options =>
-{
-    options.RequireHttpsMetadata = false;
-    options.Authority = "http://localhost:8080/realms/BuysellRealm";
-    options.Audience = "account";
-
-    options.TokenValidationParameters = new TokenValidationParameters
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
     {
-        ValidateAudience = false,
-        RoleClaimType = "roles"
-    };
-});
+        options.RequireHttpsMetadata = false;
+        //options.Authority = "http://localhost:8080/realms/buysell-realm";
+        options.Audience = builder.Configuration["Authentication:Audience"];
+        options.MetadataAddress = builder.Configuration["Authentication:MetadataAddress"];
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidIssuer = builder.Configuration["Authentication:ValidIssuer"],
+            //ValidateAudience = false,
+            //RoleClaimType = "realm_access.roles"
+        };
+    });
+
 
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy =>
-        policy.RequireRole("Admin"));
+        policy.RequireRole("admin"));
 });
 
 var app = builder.Build();
