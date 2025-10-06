@@ -42,15 +42,12 @@ builder.Services.AddCors(options =>
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
     {
         options.RequireHttpsMetadata = false;
-        //options.Authority = "http://localhost:8080/realms/buysell-realm";
-        options.Audience = builder.Configuration["Authentication:Audience"];
-        options.MetadataAddress = builder.Configuration["Authentication:MetadataAddress"];
+        options.Authority = "http://localhost:8080/realms/buysell-realm";
 
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidIssuer = builder.Configuration["Authentication:ValidIssuer"],
-            //ValidateAudience = false,
-            //RoleClaimType = "realm_access.roles"
+            ValidateAudience = false,
+            RoleClaimType = "realm_access.roles"
         };
     });
 
