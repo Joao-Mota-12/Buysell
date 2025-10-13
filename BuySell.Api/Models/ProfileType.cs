@@ -6,8 +6,16 @@ namespace BuySell.Api.Models
         [Table("ProfileTypes")]
         public class ProfileType
         {
-            [Key]
+        public static string AdminId = "ADMIN";
+        public static string BuyerId = "BUYER";
+        public static string SellerId = "SELLER";
+
+
+        [Key]
             public int Id { get; set; }
+
+            [Required]
+            public string Code { get; set; }
 
             [Required]
             [StringLength(50)]

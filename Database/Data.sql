@@ -6,9 +6,9 @@ USE BuysellDB;
 GO
 
 -- 1. ProfileTypes
-INSERT INTO ProfileTypes (Id, Name, Description) VALUES (1,'Buyer', 'Can browse and buy products');
-INSERT INTO ProfileTypes (Id, Name, Description) VALUES (2,'Seller', 'Can list and sell products');
-INSERT INTO ProfileTypes (Id, Name, Description) VALUES (3,'Admin', 'Full access to the platform');
+INSERT INTO ProfileTypes (Id, Code, Name, Description) VALUES (1,'BUYER','Buyer', 'Can browse and buy products');
+INSERT INTO ProfileTypes (Id, Code, Name, Description) VALUES (2,'SELLER','Seller', 'Can list and sell products');
+INSERT INTO ProfileTypes (Id, Code, Name, Description) VALUES (3,'ADMIN','Admin', 'Full access to the platform');
 
 -- 2. Profiles
 INSERT INTO Profiles (Id, ProfileTypeId, DisplayName) VALUES (1, 3, 'Admin');

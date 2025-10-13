@@ -8,6 +8,7 @@ GO
 -- 1. Profile Types
 CREATE TABLE ProfileTypes (
     Id INT PRIMARY KEY,
+    Code NVARCHAR(10) NOT NULL UNIQUE,
     Name NVARCHAR(50) NOT NULL,
     Description NVARCHAR(255) NULL
 );
