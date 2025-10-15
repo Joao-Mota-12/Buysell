@@ -6,5 +6,6 @@ namespace BuySell.Api.Repositories
     {
         Task<IEnumerable<Product>> GetAllAsync();
 
+        Task<IEnumerable<Product>> GetAllByUserEmail(string email);
     }
 }

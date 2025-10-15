@@ -1,12 +1,10 @@
 ﻿using System.Security.Claims;
-using static System.Net.WebRequestMethods;
 
 namespace BuySell.Api.Services
 {
     public class ClaimsHelper : IClaimsHelper
     {
         public const string RoleClaimId = "http://schemas.buysell.com/ws/2008/06/identity/role";
-
 
         public string GetEmail(ClaimsIdentity identity)
         {
@@ -22,9 +20,6 @@ namespace BuySell.Api.Services
         {
             if(identity != null)
             {
-                //foreach (var claim in identity.Claims)
-                //{
-                //}
                 var x = identity.FindFirst(RoleClaimId)?.Value;
                 return x;
 
@@ -37,6 +32,14 @@ namespace BuySell.Api.Services
             if (identity != null && role != null)
             {
                 identity.AddClaim(new Claim(RoleClaimId, role));
+            }
+        }
+
+        public void SetEmail(ClaimsIdentity identity, string email)
+        {
+            if (identity != null && email != null)
+            {
+                identity.AddClaim(new Claim(ClaimTypes.Email, email));
             }
         }
     }

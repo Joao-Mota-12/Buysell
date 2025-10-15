@@ -9,5 +9,7 @@ namespace BuySell.Api.Services
         public string GetRole(ClaimsIdentity identity);
 
         public void SetRole(ClaimsIdentity identity, string role);
+
+        public void SetEmail(ClaimsIdentity identity, string email);
     }
 }

@@ -18,6 +18,5 @@ namespace BuySell.Api.Models
         public string DisplayName { get; set; } = string.Empty;
         public ProfileType ProfileType { get; set; } = null!;
         public ICollection<User>? Users { get; set; }
-        public ICollection<Product>? ProductsOwned { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace BuySell.Api.Models
         public string KeycloakId { get; set; } = string.Empty;
 
         [StringLength(100)]
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
@@ -26,5 +26,6 @@ namespace BuySell.Api.Models
 
         public Profile Profile { get; set; } = null!;
         public ICollection<Order>? Orders { get; set; }
+        public ICollection<Product>? ProductsOwned { get; set; }
     }
 }

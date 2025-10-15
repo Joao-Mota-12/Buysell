@@ -31,7 +31,7 @@ namespace BuySell.Api.Models
         public DateTime? UpdatedAt { get; set; }
 
         [InverseProperty("ProductsOwned")]
-        public Profile Owner { get; set; } = null!;
+        public User Owner { get; set; } = null!;
 
         public ICollection<Order>? Orders { get; set; }
     }

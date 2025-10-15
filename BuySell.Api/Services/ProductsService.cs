@@ -11,5 +11,10 @@ namespace BuySell.Api.Services
         {
             return await _productsRepository.GetAllAsync();
         }
+
+        public async Task<IEnumerable<Product>> GetAllProductsByOwnerEmail(string email)
+        {
+            return await _productsRepository.GetAllByUserEmail(email);
+        }
     }
 }

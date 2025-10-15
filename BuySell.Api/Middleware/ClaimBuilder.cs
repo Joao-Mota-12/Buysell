@@ -14,6 +14,7 @@ namespace BuySell.Api.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
+
             IClaimsHelper _claimsHelper = context.RequestServices.GetRequiredService<IClaimsHelper>();
             IUsersService _userService = context.RequestServices.GetRequiredService<IUsersService>();
 
@@ -23,8 +24,9 @@ namespace BuySell.Api.Middleware
 
             var user = await _userService.GetUserByEmail(email);
 
-            if(user != null)
+            if(user != null )
             {
+                _claimsHelper.SetEmail(identity, user.Email);
                 _claimsHelper.SetRole(identity, user.Profile.ProfileType.Code);
             }
             

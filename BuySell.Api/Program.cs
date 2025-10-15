@@ -2,12 +2,10 @@
 using BuySell.Api.Middleware;
 using BuySell.Api.Repositories;
 using BuySell.Api.Services;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
-using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -94,6 +92,9 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy =>
         policy.RequireClaim(ClaimsHelper.RoleClaimId,"ADMIN"));
+
+    options.AddPolicy("SellerOrAdmin", policy =>
+        policy.RequireClaim(ClaimsHelper.RoleClaimId, "SELLER","ADMIN"));
 
     options.AddPolicy("TestRole", policy =>
         policy.RequireClaim(ClaimTypes.Role,"admin2"));

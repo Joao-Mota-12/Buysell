@@ -6,5 +6,6 @@ namespace BuySell.Api.Services
     {
         Task<IEnumerable<Product>> GetAllProductsAsync();
 
+        Task<IEnumerable<Product>> GetAllProductsByOwnerEmail(string email);
     }
 }
