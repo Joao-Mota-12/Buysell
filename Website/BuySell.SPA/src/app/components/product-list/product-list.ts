@@ -14,6 +14,7 @@ export class ProductList implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
+    this.getSellerProducts();
     console.log(this.products);
   }
 
@@ -21,6 +22,7 @@ export class ProductList implements OnInit {
   public errorMessage: string | null = null;
 
   public products: Product[] = [];
+  public productsSeller: Product[] = [];
 
   public async getProducts(): Promise<void> {
     this.isLoading = true;
@@ -30,6 +32,25 @@ export class ProductList implements OnInit {
       next: (data: Product[]) => {
         this.products = data;
         console.log('Products successfully loaded.', this.products);
+        this.isLoading = false;
+      },
+      error: (err : any) => {
+        console.error('API call failed:', err);
+        this.errorMessage = 'Failed to load products. Please try again later.';
+        this.isLoading = false;
+      },
+    })
+  }
+
+  public async getSellerProducts(): Promise<void> {
+    this.isLoading = true;
+    this.errorMessage = null;
+
+    this.productService.getAllSellerProducts().subscribe({
+      next: (data: Product[]) => {
+
+        this.productsSeller = data;
+        console.log('ProductsSeller successfully loaded.', this.productsSeller);
         this.isLoading = false;
       },
       error: (err : any) => {

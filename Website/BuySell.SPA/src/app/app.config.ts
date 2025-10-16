@@ -1,7 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { providePrimeNG } from 'primeng/config';
-import { OAuthService, provideOAuthClient } from 'angular-oauth2-oidc';
 import { provideKeycloak, createInterceptorCondition, withAutoRefreshToken, AutoRefreshTokenService, UserActivityService, INCLUDE_BEARER_TOKEN_INTERCEPTOR_CONFIG, IncludeBearerTokenCondition, includeBearerTokenInterceptor } from 'keycloak-angular';
 
 
@@ -30,7 +29,7 @@ export const provideKeycloakAngular = () =>
     features: [
       withAutoRefreshToken({
         onInactivityTimeout: 'logout',
-        sessionTimeout: 60000
+        sessionTimeout: 5000
       })
     ],
     providers: [
@@ -42,8 +41,6 @@ export const provideKeycloakAngular = () =>
       }
     ]
   });
-
-
 
 export const appConfig: ApplicationConfig = {
   providers: [

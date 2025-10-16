@@ -5,3 +5,11 @@
     <p>{{ product.description }}</p>
   </ng-template>
 </p-card>
+
+
+<p>Seller Product List</p>
+<p-card *ngFor="let product of productsSeller" [header]="product.name" [style.margin-bottom]="'20px'">
+  <ng-template pTemplate="content">
+    <p>{{ product.description }}</p>
+  </ng-template>
+</p-card>

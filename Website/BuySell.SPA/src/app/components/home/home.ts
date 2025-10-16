@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Keycloak from 'keycloak-js';
 import { ButtonModule } from 'primeng/button';
@@ -13,6 +13,7 @@ export class Home {
   private readonly keycloak = inject(Keycloak);
 
   public constructor(private router: Router) {}
+
   public goToProducts() {
     this.router.navigate(['/products']);
   }
