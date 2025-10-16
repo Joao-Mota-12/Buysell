@@ -10,7 +10,6 @@ namespace BuySell.Api.Models
         public int Id { get; set; }
 
         [Required]
-        [ForeignKey("ProfileType")]
         public int ProfileTypeId { get; set; }
 
         [Required]

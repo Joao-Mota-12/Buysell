@@ -21,7 +21,6 @@ namespace BuySell.Api.Models
         public DateTime? LastLogin { get; set; }
 
         [Required]
-        [ForeignKey("Profile")]
         public int ProfileId { get; set; }
 
         public Profile Profile { get; set; } = null!;

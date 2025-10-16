@@ -22,7 +22,7 @@ namespace BuySell.Api.Models
             public string Name { get; set; } = string.Empty;
 
             [StringLength(255)]
-            public string? Description { get; set; }
+            public string? Description { get; set; }         
 
             public ICollection<Profile>? Profiles { get; set; }
     }

@@ -11,7 +11,6 @@ namespace BuySell.Api.Models
         public int Id { get; set; }
 
         [Required]
-        [ForeignKey("Owner")]
         public int OwnerId { get; set; }
 
         [Required]
@@ -30,7 +29,6 @@ namespace BuySell.Api.Models
 
         public DateTime? UpdatedAt { get; set; }
 
-        [InverseProperty("ProductsOwned")]
         public User Owner { get; set; } = null!;
 
         public ICollection<Order>? Orders { get; set; }
