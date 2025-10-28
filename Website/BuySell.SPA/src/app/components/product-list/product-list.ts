@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from 'primeng/card';
 import { CommonModule } from '@angular/common';
 import { Product, ProductService } from '../../services/product-service/product-service';
+import { Sidebar } from '../sidebar/sidebar';
+import { SharedModule } from '../../shared.module';
 
 @Component({
+  standalone: true,
   selector: 'app-product-list',
-  imports: [Card, CommonModule],
+  imports: [SharedModule, CommonModule, Sidebar],
   templateUrl: './product-list.html',
-  styleUrl: './product-list.css',
+  styleUrls: ['./product-list.css'],
 })
 export class ProductList implements OnInit {
   public constructor(private readonly productService: ProductService) {}
@@ -17,6 +19,8 @@ export class ProductList implements OnInit {
     this.getSellerProducts();
     console.log(this.products);
   }
+
+  public productsTest : Product[] = [];
 
   public isLoading: boolean = false;
   public errorMessage: string | null = null;

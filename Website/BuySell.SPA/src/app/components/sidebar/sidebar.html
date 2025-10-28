@@ -1,7 +1,7 @@
-<p-sidebar [(visible)]="sidebarVisible">
-    <h3>Sidebar</h3>
-    <p>
-        Lorem ipsum dolor sit amet...
-    </p>
-</p-sidebar>
-<p-button (onClick)="sidebarVisible = true" icon="pi pi-arrow-right" />
+<p-card class="sidebar-card">
+  <div class="sidebar">
+    <p-button label="All Products" [routerLink]="['/all/products']"  icon="pi pi-list"></p-button>
+    <p-button label="My Products" [routerLink]="['/my/products']" class = "sidebar-button" icon="pi pi-user"></p-button>
+    <p-button  label="My Orders" class="sidebar-button" icon="pi pi-tag"></p-button>
+  </div>
+</p-card>

@@ -1,0 +1,12 @@
+<div [style]="{'display': 'flex','height':'100vh', 'width': '100vw'}" class="main-layout-wrapper">
+  <app-sidebar (menuClick)="onMenuClick($event)"></app-sidebar>
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- <div style="padding: 20px">
+    <p-button (onClick)="goToProducts()" label="See productsSeller"></p-button>
+  </div> -->
+
+    <!-- display: flex;
+  height: 100vh;
+  width: 100vw; -->

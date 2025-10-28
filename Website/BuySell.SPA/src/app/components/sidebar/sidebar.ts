@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
-import { SidebarModule } from 'primeng/sidebar';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from '../../shared.module';
 
 @Component({
+  standalone: true,
   selector: 'app-sidebar',
-  imports: [SidebarModule],
+  imports: [SharedModule, RouterModule],
   templateUrl: './sidebar.html',
-  styleUrl: './sidebar.css'
+  styleUrls: ['./sidebar.css'],
 })
-export class Sidebar {
+export class Sidebar{
+  @Output() menuClick = new EventEmitter<string>();
+
+
+  selectMenu(menu: string) {
+    console.log(`Menu selected: ${menu}`);
+    this.menuClick.emit(menu);
+  }
 
 }
