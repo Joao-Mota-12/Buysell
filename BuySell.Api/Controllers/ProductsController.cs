@@ -23,7 +23,7 @@ namespace BuySell.Api.Controllers
         }
 
         [HttpGet("seller")]
-        [Authorize(Policy = "SellerOrAdmin")]
+        [Authorize(Policy = "SellerOnly")]
         public async Task<ActionResult<IEnumerable<Product>>> GetAllByOwnerEmail()
         {
             var email = User.FindFirst(ClaimTypes.Email)?.Value;

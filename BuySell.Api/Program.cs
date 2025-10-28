@@ -102,6 +102,9 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("SellerOrAdmin", policy =>
         policy.RequireClaim(ClaimsHelper.RoleClaimId, "SELLER","ADMIN"));
 
+    options.AddPolicy("SellerOnly", policy =>
+        policy.RequireClaim(ClaimsHelper.RoleClaimId, "SELLER"));
+
     options.AddPolicy("TestRole", policy =>
         policy.RequireClaim(ClaimTypes.Role,"admin2"));
 
