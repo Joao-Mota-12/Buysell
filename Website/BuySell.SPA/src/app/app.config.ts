@@ -67,7 +67,7 @@ export const appConfig: ApplicationConfig = {
       },
     }),
 
-    // provideKeycloakAngular(),
+    provideKeycloakAngular(),
 
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor])),
     // {
