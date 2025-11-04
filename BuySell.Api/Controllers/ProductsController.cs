@@ -6,7 +6,7 @@ using System.Security.Claims;
 
 namespace BuySell.Api.Controllers
 {
-    [ApiController]
+    [ApiController] 
     [Route("api/[controller]")]
     [Authorize]
     public class ProductsController(IProductsService productsService) : ControllerBase
@@ -15,13 +15,13 @@ namespace BuySell.Api.Controllers
 
         [HttpGet("all")]
         [Authorize(Policy = "AdminOnly")]
-        public async Task<ActionResult<IEnumerable<Product>>> GetAll()
+        public async Task<ActionResult<IEnumerable<Product>>> GetAll() 
         {
             var products = await _productsService.GetAllProductsAsync();
 
             return Ok(products);
         }
-
+         
         [HttpGet("seller")]
         [Authorize(Policy = "SellerOnly")]
         public async Task<ActionResult<IEnumerable<Product>>> GetAllByOwnerEmail()

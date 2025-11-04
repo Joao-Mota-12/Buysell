@@ -45,54 +45,22 @@ builder.Services.AddCors(options =>
     });
 });
 
-
 // Authentication/Authorization
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
     {
         options.RequireHttpsMetadata = false;
         options.Authority = "http://localhost:8080/realms/buysell-realm";
-
+        options.Audience = "account";
+        
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateAudience = false,
+            ValidateIssuerSigningKey = true,
+            ValidateLifetime = true,
+            ValidateIssuer = true,
+            ValidateAudience = true,
             RoleClaimType = "realm_access.roles"
         };
-
-        //options.Events = new JwtBearerEvents
-        //{
-        //    OnTokenValidated = context =>
-        //    {
-        //        var claimsIdentity = context.Principal.Identity as ClaimsIdentity;
-        //        var realmAccess = context.Principal.FindFirst("realm_access")?.Value;
-
-        //        if (realmAccess != null)
-        //        {
-        //            var parsed = JsonDocument.Parse(realmAccess);
-        //            if (parsed.RootElement.TryGetProperty("roles", out var roles))
-        //            {
-        //                foreach (var role in roles.EnumerateArray())
-        //                {
-        //                    claimsIdentity?.AddClaim(new Claim(claimsIdentity.RoleClaimType, role.GetString()));
-        //                }
-        //            }
-        //        }
-        //        return Task.CompletedTask;
-        //    }
-        //};
-
     });
-
-
-//builder.Services.AddAuthorizationBuilder()
-//          .AddPolicy(AuthorizationPolicies.Admin, policy =>
-//          {
-//              policy.RequireRole("Admin");
-//              policy.RequireAssertion(context =>
-//              {
-//                  return context.User.Claims.Any(claim =>
-//                      claim.Type == "scope" && claim.Value.Split(' ').Contains("Auc.FullAccess"));
-//              });
-//          });
 
 builder.Services.AddAuthorization(options =>
 {
@@ -104,11 +72,6 @@ builder.Services.AddAuthorization(options =>
 
     options.AddPolicy("SellerOnly", policy =>
         policy.RequireClaim(ClaimsHelper.RoleClaimId, "SELLER"));
-
-    options.AddPolicy("TestRole", policy =>
-        policy.RequireClaim(ClaimTypes.Role,"admin2"));
-
-    //options.AddPolicy()
 });
 
 var app = builder.Build();
@@ -117,7 +80,7 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-app.UseAuthentication();
+app.UseAuthentication();  
 app.UseMiddleware<ClaimBuilderMiddleware>();
 app.UseAuthorization();
 
