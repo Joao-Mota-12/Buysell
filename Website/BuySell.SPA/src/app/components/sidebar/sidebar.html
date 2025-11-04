@@ -1,7 +1,8 @@
 <p-card class="sidebar-card">
   <div class="sidebar">
-    <p-button label="All Products" [routerLink]="['/all/products']"  icon="pi pi-list"></p-button>
+    <p-button *ngIf="isAdmin" label="All Products" [routerLink]="['/all/products']"  icon="pi pi-list"></p-button>
     <p-button label="My Products" [routerLink]="['/my/products']" class = "sidebar-button" icon="pi pi-user"></p-button>
     <p-button  label="My Orders" class="sidebar-button" icon="pi pi-tag"></p-button>
+    <p-button  label="Logout" class="sidebar-button" icon="pi-arrow-circle-right" (click)="logout()"></p-button>
   </div>
 </p-card>

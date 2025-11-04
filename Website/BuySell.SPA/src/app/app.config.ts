@@ -1,17 +1,28 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
+import {
+  ApplicationConfig,
+  provideBrowserGlobalErrorListeners,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { providePrimeNG } from 'primeng/config';
-import { provideKeycloak, createInterceptorCondition, withAutoRefreshToken, AutoRefreshTokenService, UserActivityService, INCLUDE_BEARER_TOKEN_INTERCEPTOR_CONFIG, IncludeBearerTokenCondition, includeBearerTokenInterceptor } from 'keycloak-angular';
-
+import {
+  provideKeycloak,
+  createInterceptorCondition,
+  withAutoRefreshToken,
+  AutoRefreshTokenService,
+  UserActivityService,
+  INCLUDE_BEARER_TOKEN_INTERCEPTOR_CONFIG,
+  IncludeBearerTokenCondition,
+  includeBearerTokenInterceptor,
+} from 'keycloak-angular';
 
 import Aura from '@primeuix/themes/aura';
 
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
-
 const localhostCondition = createInterceptorCondition<IncludeBearerTokenCondition>({
-  urlPattern: /^https:\/\/localhost:7098(\/.*)?$/i
+  urlPattern: /^https:\/\/localhost:7098(\/.*)?$/i,
 });
 
 export const provideKeycloakAngular = () =>
@@ -19,27 +30,27 @@ export const provideKeycloakAngular = () =>
     config: {
       realm: 'buysell-realm',
       url: 'http://localhost:8080',
-      clientId: 'angular-client'
+      clientId: 'angular-client',
     },
     initOptions: {
       onLoad: 'check-sso',
       silentCheckSsoRedirectUri: window.location.origin + '/assets/silent-check-sso.html',
-      redirectUri: window.location.origin + '/products',
+      redirectUri: window.location.origin + '/entry',
     },
     features: [
       withAutoRefreshToken({
         onInactivityTimeout: 'logout',
-        sessionTimeout: 5000
-      })
+        sessionTimeout: 5000,
+      }),
     ],
     providers: [
       AutoRefreshTokenService,
       UserActivityService,
       {
         provide: INCLUDE_BEARER_TOKEN_INTERCEPTOR_CONFIG,
-        useValue: [localhostCondition]
-      }
-    ]
+        useValue: [localhostCondition],
+      },
+    ],
   });
 
 export const appConfig: ApplicationConfig = {
@@ -51,15 +62,22 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: Aura,
         options: {
-          darkModeSelector: false
-        }
+          darkModeSelector: false,
+        },
       },
     }),
 
-    provideKeycloakAngular(),
+    // provideKeycloakAngular(),
+
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor])),
-  ]
+    // {
+    //   provide: INCLUDE_BEARER_TOKEN_INTERCEPTOR_CONFIG,
+    //   useValue: [
+    //     {
+    //       urlPattern: /^https:\/\/localhost:7098(\/.*)?$/i,
+    //       httpMethods: ['GET', 'POST', 'PUT', 'DELETE'],
+    //     }
+    //   ]
+    // }
+  ],
 };
-
-
-
